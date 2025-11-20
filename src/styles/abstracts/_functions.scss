@@ -1,0 +1,26 @@
+// Convert px to rem
+@function rem($pixels, $base: 16) {
+  @return ($pixels / $base) * 1rem;
+}
+
+// Convert px to em
+@function em($pixels, $base: 16) {
+  @return ($pixels / $base) * 1em;
+}
+
+// Calculate line height
+@function line-height($font-size, $line-height) {
+  @return $line-height / $font-size;
+}
+
+// Get color with opacity
+@function color-opacity($color, $opacity) {
+  @return rgba($color, $opacity);
+}
+
+// Strip unit from value
+@function strip-unit($value) {
+  @return $value / ($value * 0 + 1);
+}
+
+

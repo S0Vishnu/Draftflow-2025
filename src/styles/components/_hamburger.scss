@@ -1,0 +1,48 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.hamburger {
+  @include button-reset;
+  position: relative;
+  width: 24px;
+  height: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  z-index: $z-index-fixed;
+
+  &__line {
+    width: 100%;
+    height: 2px;
+    background-color: $color-text;
+    border-radius: 2px;
+    transition: all $transition-base;
+    transform-origin: center;
+  }
+
+  &--active {
+    .hamburger__line {
+      &:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+      }
+
+      &:nth-child(2) {
+        opacity: 0;
+        transform: translateX(-10px);
+      }
+
+      &:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+      }
+    }
+  }
+
+  &:hover {
+    .hamburger__line {
+      background-color: $color-primary;
+    }
+  }
+}
+
+
