@@ -1,3 +1,5 @@
+@use "./variables" as v;
+
 // Font face declarations
 @font-face {
   font-family: "Inter";
@@ -32,8 +34,6 @@
 }
 
 // Font family variables
-$font-family-primary: $font-family-base;
-$font-family-heading: $font-family-base;
+$font-family-primary: v.$font-family-base;
+$font-family-heading: v.$font-family-base;
 $font-family-mono: "Courier New", Courier, monospace;
-
-

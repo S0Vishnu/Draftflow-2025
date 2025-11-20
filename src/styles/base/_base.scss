@@ -1,5 +1,5 @@
-@use "../abstracts/variables" as *;
-@use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
 
 html {
   font-size: 16px;
@@ -7,11 +7,11 @@ html {
 }
 
 body {
-  font-family: $font-family-base;
-  font-size: $font-size-md;
+  font-family: v.$font-family-base;
+  font-size: v.$font-size-md;
   line-height: 1.5;
-  color: $color-text;
-  background-color: $color-background;
+  color: v.$color-text;
+  background-color: v.$color-background;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -25,40 +25,38 @@ h5,
 h6 {
   font-weight: 600;
   line-height: 1.2;
-  color: $color-text;
+  color: v.$color-text;
 }
 
 h1 {
-  font-size: $font-size-xl;
+  font-size: v.$font-size-xl;
 }
 
 h2 {
-  font-size: $font-size-lg;
+  font-size: v.$font-size-lg;
 }
 
 h3 {
-  font-size: $font-size-md;
+  font-size: v.$font-size-md;
 }
 
 // Links
 a {
-  color: $color-primary;
-  transition: color $transition-base;
+  color: v.$color-primary;
+  transition: color v.$transition-base;
 
   &:hover {
-    color: darken($color-primary, 10%);
+    color: darken(v.$color-primary, 10%);
   }
 }
 
 // Focus styles
 *:focus-visible {
-  @include focus-ring;
+  @include m.focus-ring;
 }
 
 // Selection
 ::selection {
-  background-color: $color-primary;
+  background-color: v.$color-primary;
   color: #ffffff;
 }
-
-

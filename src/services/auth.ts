@@ -14,8 +14,8 @@ export interface OtpResponse {
 }
 
 // Static password for local development
-const STATIC_PASSWORD = 'draftflow2025';
-const STATIC_OTP = '12345';
+export const STATIC_PASSWORD = 'draftflow2025';
+export const STATIC_OTP = '12345';
 
 // Simulate API delay
 const delay = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
